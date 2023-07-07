@@ -1,2 +1,1 @@
-# HabiCrowd website. 
-This site is not provided as the link for the NeurIPS 2023 submission "HabiCrowd: A High Performance Simulator for Crowd-Aware Visual Navigation". Therefore, the authors of this repository do not take any responsibility to break anonymity. 
+# Website of IROS 2023 - Open-Vocabulary Affordance Detection in 3D Point Clouds.
