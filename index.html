@@ -6,11 +6,11 @@
         content="Open-Vocabulary Affordance Detection in 3D Point Clouds">
   <meta name="keywords" content="affordance detection, 3D point clouds, robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="./static/images/habicrowd.png"/>
-  <link rel="image_src" href="./static/images/habicrowd.png">
+  <meta property="og:image" content="./static/images/openad.jpeg"/>
+  <link rel="image_src" href="./static/images/openad.jpeg">
   <link rel="icon"
         type="image/x-icon"
-        href="./static/images/habicrowd.ico"/>
+        href="./static/images/openad.ico"/>
 
   <title>Open-Vocabulary Affordance Detection in 3D Point Clouds</title>
 
@@ -74,22 +74,19 @@
         <div class="column has-text-centered">
           <div class="publication-links">
             <span class="link-block">
-              <a href="https://github.com/habicrowd/HabiCrowd"
-                 class="external-link button is-normal is-rounded is-dark">
+              <a class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-github"></i>
                 </span>
-                <span>Code</span>
+                <span>Code (coming soon)</span>
                 </a>
             </span>
-            <!-- Dataset Link. -->
             <span class="link-block">
-              <a href="https://github.com/habicrowd/HabiCrowd/tree/main/dataset"
-                 class="external-link button is-normal is-rounded is-dark">
+              <a class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
-                    <i class="far fa-images"></i>
+                  <i class="fa-solid fa-database"></i>
                 </span>
-                <span>Data</span>
+                <span>Data (coming soon)</span>
                 </a>
               </span>
           </div>
@@ -99,27 +96,6 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div id="wrapper"> 
-        <video id="teaser_4" autoplay controls muted loop playsinline width="32%" height="100%"> 
-            <source type="video/mp4" src="static/images/scene_1.mp4" /> 
-        </video>
-        <video id="teaser_2" autoplay controls muted loop playsinline width="32%" height="100%"> 
-          <source type="video/mp4" src="static/images/scene_3.mp4" /> 
-        </video>
-        <video id="teaser_3" autoplay controls muted loop playsinline width="32%" height="100%"> 
-            <source type="video/mp4" src="static/images/scene_2.mp4" /> 
-        </video>
-        <div class="clear"></div> 
-      </div>
-      <h2 class="subtitle has-text-centered">
-        <i>HabiCrowd</i>, a new dataset and benchmark for crowd-aware visual navigation that surpasses other benchmarks in terms of human diversity and computational utilization.
-      </h2>
-    </div>
-  </div>
-</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -130,16 +106,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Visual navigation, a foundational aspect of Embodied AI (E-AI), has been
-            significantly studied in the past few years. While many 3D simulators have
-            been introduced to support visual navigation tasks, scarcely works have
-            been directed towards combining human dynamics, creating the gap between
-            simulation and real-world applications. Furthermore, current 3D simulators
-            incorporating human dynamics have several limitations, particularly in
-            terms of computational efficiency, which is a promise of E-AI simulators.
-            To overcome these shortcomings, we introduce HabiCrowd, the first standard
-            benchmark for crowd-aware visual navigation that integrates a crowd
-            dynamics model with diverse human settings into photorealistic environments. Empirical evaluations demonstrate that our proposed human dynamics model achieves state-of-the-art performance in collision avoidance, while exhibiting superior computational efficiency compared to its counterparts. We leverage HabiCrowd to conduct several comprehensive studies on crowd-aware visual navigation tasks and human-robot interactions.
+            Affordance detection is a challenging problem with a wide variety of robotic applications.
+            Traditional affordance detection methods are limited to a predefined set of affordance labels,
+            hence potentially restricting the adaptability of intelligent robots in complex and dynamic environments.
+            In this paper, we present the Open-Vocabulary Affordance Detection (OpenAD) method, which is capable of
+            detecting an unbounded number of affordances in 3D point clouds. By simultaneously learning the affordance
+            text and the point fea- ture, OpenAD successfully exploits the semantic relationships between affordances.
+            Therefore, our proposed method enables zero-shot detection and can be able to detect previously unseen affordances
+            without a single annotation example. Intensive experimental results show that OpenAD works effectively on a
+            wide range of affordance detection setups and outperforms other baselines by a large margin.
+            Additionally, we demonstrate the practicality of the proposed OpenAD in real-world robotic applications with a
+            fast inference speed (≈ 100 ms).
           </p>
         </div>
       </div>
@@ -148,78 +125,6 @@
   </div>
 </section>
 
-
-<section class="hero teaser">
-  <div class="hero-body">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Key Contributions</h2>
-      </div>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="content has-text-justified">
-        <p>
-          <i>UPL++</i>, our proposed human dynamics model achieve collision-free, while
-        significantly outperforms computational time of state-of-the-art human dynamics
-        model of iGibson-SN (ORCA).
-        </p>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <img style="width: 80%;" src="./static/images/comparison.svg" alt="Comparison with related human dynamics model."/>
-      </div>
-      <div class="content has-text-justified">
-        <p>
-          Furthermore, our simulator shows remarkable computational utilization over related benchmarks.
-          The rendering speed is approximately two times faster than Isaac Sim, approximately three times faster than iGibson-SN
-          while RAM utilizations is approximately six times smaller than Isaac Sim. We also achieve wider
-          range of human diversity. More information can be found in our paper.
-        </p>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <img style="width: 80%;" src="./static/images/simulator.svg"
-                  alt="Comparison with related benchmarks."/>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <video id="teaser" autoplay controls muted loop playsinline width="50%" height="100%">
-          <source src="./static/images/upl++.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-      <div class="content has-text-centered">
-        <p>
-          An example of our human dynamics UPL++ projected on 2D floor plan.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="hero-body">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Crowd-aware Visual Navigation</h2>
-      </div>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <video id="teaser" autoplay controls muted loop playsinline width="50%" height="100%">
-          <source src="./static/images/scene_0_promt.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-      <div class="content has-text-justified">
-        <p>
-          Utilizing HabiCrowd, we benchmark two tasks: point-goal and object-goal navigation.
-          We benchmark five state-of-the-art baselines on both crowd-aware navigation (robotics)
-          and egocentric-based (computer vision) literature.
-        </p>
-      </div>
-      <img style="width: 90%;" src="./static/images/benchmarking.svg"
-                 alt="Comparison with related human dynamics model."/>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="acknowledgements">
   <div class="container content is-max-desktop">
